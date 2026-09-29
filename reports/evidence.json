@@ -1,0 +1,367 @@
+{
+  "generatedAt": "2026-09-29T13:43:08Z",
+  "summary": {
+    "specs": 4,
+    "requirements": 15,
+    "criteria": 52,
+    "tasksDone": 35,
+    "tasksTotal": 35,
+    "hooks": 4,
+    "steeringDocs": 3,
+    "unitPassed": 142,
+    "unitTotal": 142,
+    "e2ePassed": 51,
+    "e2eRun": 51,
+    "e2eSkipped": 1,
+    "coverageLines": 99.87,
+    "evidenceItems": 11,
+    "evidencePassing": 11
+  },
+  "specs": [
+    {
+      "name": "insights-experience",
+      "requirements": 4,
+      "criteria": 13,
+      "tasksDone": 9,
+      "tasksTotal": 9
+    },
+    {
+      "name": "money-engine",
+      "requirements": 4,
+      "criteria": 16,
+      "tasksDone": 10,
+      "tasksTotal": 10
+    },
+    {
+      "name": "settle-up",
+      "requirements": 4,
+      "criteria": 9,
+      "tasksDone": 6,
+      "tasksTotal": 6
+    },
+    {
+      "name": "transaction-intelligence",
+      "requirements": 3,
+      "criteria": 14,
+      "tasksDone": 10,
+      "tasksTotal": 10
+    }
+  ],
+  "items": [
+    {
+      "id": "ME-1",
+      "spec": "money-engine",
+      "requirement": "3.1–3.3 Allocation never loses a minor unit",
+      "tested": "1,000,000 seeded random splits (2–7 parts, equal or weighted 1–10) across GBP, EUR, USD, CHF, JPY and KWD, checking that the parts add back to the total",
+      "context": "Integer minor units + largest-remainder allocation vs splitting major-unit floats and rounding each share",
+      "metric": "Minor units lost over 1M splits",
+      "value": "0 units lost (0 bad splits)",
+      "baseline": "floats: 767,538 units lost in 571,547 of 1,000,000 splits",
+      "tests": [
+        {
+          "id": "src/lib/money/money.test.ts",
+          "passed": 53,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "libraries": [
+        "TypeScript bigint",
+        "fast-check",
+        "Vitest"
+      ],
+      "testsPassed": 53,
+      "testsFailed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "ME-2",
+      "spec": "money-engine",
+      "requirement": "2.1–2.3 Exact FX conversion with banker's rounding",
+      "tested": "1,000,000 seeded conversions between the six currencies at ECB fixture rates, compared with an independent exact BigInt reference",
+      "context": "Engine (rational rates, half-even) vs Math.round(amount × rate) on floats; float errors counted against both half-even and its own half-up policy",
+      "metric": "Conversions differing from the exact result",
+      "value": "0 of 1,000,000",
+      "baseline": "floats: 183 wrong even by their own half-up rule (346 vs half-even)",
+      "tests": [
+        {
+          "id": "src/lib/money/fx.test.ts",
+          "passed": 13,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "libraries": [
+        "TypeScript bigint",
+        "fast-check"
+      ],
+      "testsPassed": 13,
+      "testsFailed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "ME-3",
+      "spec": "money-engine",
+      "requirement": "4.2 Round trips and running balances (reported even where floats tie)",
+      "tested": "1,000,000 A→B→A round trips at mid rate, and a 1,000,000-posting running balance",
+      "context": "Both methods must round to the intermediate currency's minor unit, so round trips lose up to a couple of units either way",
+      "metric": "Round-trip max error · ledger drift",
+      "value": "engine max 2 units (mean signed -0.00012) · ledger drift 0",
+      "baseline": "floats max 2 units (mean signed 0.00016) · ledger drift 0 after rounding (no measurable advantage here)",
+      "tests": [
+        {
+          "id": "src/lib/money/money.test.ts",
+          "passed": 53,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "id": "src/lib/money/fx.test.ts",
+          "passed": 13,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "libraries": [
+        "TypeScript bigint"
+      ],
+      "testsPassed": 66,
+      "testsFailed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "TI-1",
+      "spec": "transaction-intelligence",
+      "requirement": "1.1–1.5 Virtualised 100k-row feed",
+      "tested": "Loaded the seeded 100,000-row feed in the production build and measured DOM size, render time and search latency; the same list without virtualisation was measured at 1k, 10k and 100k",
+      "context": "Headless Chromium 1440×900, no throttling, median of 3 cold loads; filter latency = input event → result painted, 20 samples",
+      "metric": "DOM nodes · render · filter latency at 100k",
+      "value": "344 DOM nodes · 39.1 ms render · 31.9 ms median filter",
+      "baseline": "non-virtualised at 10k: 110,146 nodes · 1065.5 ms · 283.7 ms; at 100k: 12800.4 ms render, 16348.7 ms filter",
+      "tests": [
+        {
+          "id": "src/lib/feed/filter.test.ts",
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "id": "src/test/pages.test.tsx",
+          "passed": 12,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "id": "e2e/app.spec.ts",
+          "passed": 27,
+          "failed": 0,
+          "skipped": 1
+        }
+      ],
+      "libraries": [
+        "React 18",
+        "Playwright",
+        "Performance API"
+      ],
+      "testsPassed": 43,
+      "testsFailed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "TI-2",
+      "spec": "transaction-intelligence",
+      "requirement": "2.1–2.4 Merchant categorisation on a held-out set",
+      "tested": "10,000 held-out messy descriptors (35% typos, 30% truncated, processor prefixes, store numbers, cities); 20% are unseen independent businesses",
+      "context": "Rules and thresholds tuned on a separate dev seed; knowledge base of {categorise.test.knowledgeBaseEntries|int} names and aliases",
+      "metric": "Category accuracy (test seed)",
+      "value": "97.9% (known 99.7%, unseen 90.4%)",
+      "baseline": "naive keywords: 71.9% (known 72.7%, unseen 68.6%); 93% fewer errors",
+      "tests": [
+        {
+          "id": "src/lib/categorise/categorise.test.ts",
+          "passed": 20,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "libraries": [
+        "TypeScript",
+        "Jaro–Winkler (hand-written)",
+        "Vitest"
+      ],
+      "testsPassed": 20,
+      "testsFailed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "TI-3",
+      "spec": "transaction-intelligence",
+      "requirement": "3.1–3.5 Recurring-payment detection",
+      "tested": "300 held-out synthetic users × 24 months ({recurring.test.transactions|int} transactions) with {recurring.test.truthSeries|int} planted weekly/monthly/yearly series incl. price rises, failed collections and cancellations",
+      "context": "Distractors: fixed-price coffees several times a week, weekly grocery shops, random Amazon orders; tuned on seeds 1000–1099, reported on 50000–50299",
+      "metric": "Precision · recall · next-due within ±3 days",
+      "value": "P 99.3% · R 99.4% · next due 96.1%",
+      "baseline": "same-amount ≥3×: P 78.2% · R 89.6% (675 false positives vs 18)",
+      "tests": [
+        {
+          "id": "src/lib/recurring/recurring.test.ts",
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "libraries": [
+        "TypeScript"
+      ],
+      "testsPassed": 10,
+      "testsFailed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "SU-1",
+      "spec": "settle-up",
+      "requirement": "1.2, 2.1–2.2, 4.1 Minimum transfers that always balance",
+      "tested": "1,000 seeded groups of 3–12 people with 4–30 expenses each (arbitrary amounts, 20% weighted splits)",
+      "context": "Exact subset DP vs greedy vs everyone paying each payer back; every plan applied back to the balances",
+      "metric": "Transfers needed (mean per group)",
+      "value": "6.54 per group (73% fewer); 1,000/1,000 groups settle to exactly 0",
+      "baseline": "pairwise: 24.00; greedy: 6.54 (exact beat greedy in 2 groups; 16 with whole €10 bills)",
+      "tests": [
+        {
+          "id": "src/lib/settle/settle.test.ts",
+          "passed": 7,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "id": "src/test/pages.test.tsx",
+          "passed": 12,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "id": "e2e/app.spec.ts",
+          "passed": 27,
+          "failed": 0,
+          "skipped": 1
+        }
+      ],
+      "libraries": [
+        "TypeScript",
+        "fast-check"
+      ],
+      "testsPassed": 46,
+      "testsFailed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "IX-1",
+      "spec": "insights-experience",
+      "requirement": "3.1 Zero axe violations on every page",
+      "tested": "axe-core on 6 pages × light/dark × desktop/mobile",
+      "context": "Tags wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa, best-practice",
+      "metric": "axe violations",
+      "value": "0 violations in 24 scans",
+      "baseline": "994 rule checks passed",
+      "tests": [
+        {
+          "id": "e2e/a11y.spec.ts",
+          "passed": 24,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "libraries": [
+        "axe-core",
+        "Playwright"
+      ],
+      "testsPassed": 24,
+      "testsFailed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "IX-2",
+      "spec": "insights-experience",
+      "requirement": "1.1–1.4, 2.1–2.3, 3.2–3.4 Dashboard, localisation, keyboard, responsive",
+      "tested": "Every page on desktop 1440×900 and mobile 375×812: console errors, horizontal overflow, NaN/undefined text, locale switching, keyboard flow",
+      "context": "Production build in Chromium",
+      "metric": "Browser checks",
+      "value": "51 passed, 0 failed (1 desktop-only check skipped on mobile)",
+      "baseline": "0 console errors, 0 px horizontal overflow at 375 px",
+      "tests": [
+        {
+          "id": "e2e/app.spec.ts",
+          "passed": 27,
+          "failed": 0,
+          "skipped": 1
+        },
+        {
+          "id": "src/lib/i18n/i18n.test.ts",
+          "passed": 12,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "id": "src/lib/insights/insights.test.ts",
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "libraries": [
+        "Playwright",
+        "Intl API",
+        "React Testing Library"
+      ],
+      "testsPassed": 44,
+      "testsFailed": 0,
+      "status": "pass"
+    },
+    {
+      "id": "IX-3",
+      "spec": "insights-experience",
+      "requirement": "4.1–4.2 Bundle budget and lab web vitals",
+      "tested": "Gzipped the production build; measured 5 cold loads of the overview page",
+      "context": "Budget: main ≤ {bundle.budget.mainGzipKb|int} KB gzip, initial ≤ {bundle.budget.initialGzipKb|int} KB; lab metrics, no throttling",
+      "metric": "Main chunk · LCP · CLS",
+      "value": "54.0 KB main (73.1 KB initial) · LCP 44.0 ms · CLS 0.000",
+      "baseline": "within budget: true",
+      "tests": [],
+      "libraries": [
+        "Vite",
+        "zlib",
+        "Playwright"
+      ],
+      "testsPassed": 0,
+      "testsFailed": 0,
+      "status": "measured"
+    },
+    {
+      "id": "ENG-1",
+      "spec": "all",
+      "requirement": "Definition of done: tests and coverage gate",
+      "tested": "Vitest unit, property and component tests with the coverage gate on src/lib",
+      "context": "tsc strict + ESLint clean in CI",
+      "metric": "Coverage (lines, src/lib)",
+      "value": "99.9% lines · 96.3% branches",
+      "baseline": "142/142 tests passing",
+      "tests": [
+        {
+          "id": "src/",
+          "passed": 142,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "libraries": [
+        "Vitest",
+        "@vitest/coverage-v8",
+        "React Testing Library",
+        "fast-check"
+      ],
+      "testsPassed": 142,
+      "testsFailed": 0,
+      "status": "pass"
+    }
+  ]
+}

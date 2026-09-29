@@ -1,0 +1,19 @@
+{
+  "note": "Lab metrics (not field data): headless Chromium, local preview server, no throttling, median of 5 cold loads. Thresholds for \"good\": LCP ≤ 2500 ms, CLS ≤ 0.1.",
+  "overview": {
+    "samples": 5,
+    "fcpMs": 44,
+    "lcpMs": 44,
+    "cls": 0,
+    "ttfbMs": 1.1,
+    "domContentLoadedMs": 7.8
+  },
+  "transactions-100k": {
+    "samples": 5,
+    "fcpMs": 44,
+    "lcpMs": 568,
+    "cls": 0.029,
+    "ttfbMs": 1.1,
+    "domContentLoadedMs": 6.8
+  }
+}

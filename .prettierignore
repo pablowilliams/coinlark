@@ -1,0 +1,8 @@
+node_modules
+dist
+reports
+docs/screenshots
+playwright-report
+test-results
+src/lib/fixtures/*.json
+docs/EVIDENCE.md

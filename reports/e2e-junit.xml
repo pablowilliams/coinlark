@@ -1,0 +1,120 @@
+<testsuites id="" name="" tests="52" failures="0" skipped="1" errors="0" time="36.360063000000004">
+<testsuite name="a11y.spec.ts" timestamp="2026-09-29T13:38:15.380Z" hostname="desktop" tests="12" failures="0" skipped="0" time="43.765" errors="0">
+<testcase name="axe: overview (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="4.948">
+</testcase>
+<testcase name="axe: transactions (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="5.662">
+</testcase>
+<testcase name="axe: subscriptions (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="3.725">
+</testcase>
+<testcase name="axe: split (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="4.246">
+</testcase>
+<testcase name="axe: convert (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="2.985">
+</testcase>
+<testcase name="axe: categorise (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="2.428">
+</testcase>
+<testcase name="axe: overview (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="4.424">
+</testcase>
+<testcase name="axe: transactions (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="4.999">
+</testcase>
+<testcase name="axe: subscriptions (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="2.632">
+</testcase>
+<testcase name="axe: split (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="3.182">
+</testcase>
+<testcase name="axe: convert (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="2.417">
+</testcase>
+<testcase name="axe: categorise (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="2.117">
+</testcase>
+</testsuite>
+<testsuite name="app.spec.ts" timestamp="2026-09-29T13:38:15.380Z" hostname="desktop" tests="14" failures="0" skipped="0" time="22.762" errors="0">
+<testcase name="every page › overview: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.878">
+</testcase>
+<testcase name="every page › transactions: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.892">
+</testcase>
+<testcase name="every page › subscriptions: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.649">
+</testcase>
+<testcase name="every page › split: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.848">
+</testcase>
+<testcase name="every page › convert: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.902">
+</testcase>
+<testcase name="every page › categorise: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.848">
+</testcase>
+<testcase name="navigation works from the menu and marks the current page" classname="app.spec.ts" time="3.993">
+</testcase>
+<testcase name="keyboard: skip link, focus order and visible focus" classname="app.spec.ts" time="2.945">
+</testcase>
+<testcase name="language switching localises numbers, dates and labels" classname="app.spec.ts" time="3.111">
+</testcase>
+<testcase name="base currency and theme switch" classname="app.spec.ts" time="2.81">
+</testcase>
+<testcase name="transactions: search and filters on a virtualised feed" classname="app.spec.ts" time="1.494">
+</testcase>
+<testcase name="split: add an expense and still settle to zero" classname="app.spec.ts" time="1.212">
+</testcase>
+<testcase name="convert: exact result, spread and offline fixture" classname="app.spec.ts" time="1.232">
+</testcase>
+<testcase name="categoriser: typo-tolerant rules beat the naive keyword baseline" classname="app.spec.ts" time="0.948">
+</testcase>
+</testsuite>
+<testsuite name="a11y.spec.ts" timestamp="2026-09-29T13:38:15.380Z" hostname="mobile" tests="12" failures="0" skipped="0" time="29.409" errors="0">
+<testcase name="axe: overview (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="3.566">
+</testcase>
+<testcase name="axe: transactions (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="3.706">
+</testcase>
+<testcase name="axe: subscriptions (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="2.972">
+</testcase>
+<testcase name="axe: split (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="3.422">
+</testcase>
+<testcase name="axe: convert (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="2.128">
+</testcase>
+<testcase name="axe: categorise (light) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="1.89">
+</testcase>
+<testcase name="axe: overview (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="2.713">
+</testcase>
+<testcase name="axe: transactions (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="2.5">
+</testcase>
+<testcase name="axe: subscriptions (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="1.674">
+</testcase>
+<testcase name="axe: split (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="1.948">
+</testcase>
+<testcase name="axe: convert (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="1.505">
+</testcase>
+<testcase name="axe: categorise (dark) has no WCAG 2.2 AA violations" classname="a11y.spec.ts" time="1.385">
+</testcase>
+</testsuite>
+<testsuite name="app.spec.ts" timestamp="2026-09-29T13:38:15.380Z" hostname="mobile" tests="14" failures="0" skipped="1" time="12.28" errors="0">
+<testcase name="every page › overview: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.531">
+</testcase>
+<testcase name="every page › transactions: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.632">
+</testcase>
+<testcase name="every page › subscriptions: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.496">
+</testcase>
+<testcase name="every page › split: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.474">
+</testcase>
+<testcase name="every page › convert: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.492">
+</testcase>
+<testcase name="every page › categorise: renders, no console errors, no horizontal scroll, no NaN" classname="app.spec.ts" time="0.423">
+</testcase>
+<testcase name="navigation works from the menu and marks the current page" classname="app.spec.ts" time="2.857">
+</testcase>
+<testcase name="keyboard: skip link, focus order and visible focus" classname="app.spec.ts">
+<properties>
+<property name="skip" value="keyboard flow is desktop-only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="language switching localises numbers, dates and labels" classname="app.spec.ts" time="1.505">
+</testcase>
+<testcase name="base currency and theme switch" classname="app.spec.ts" time="1.05">
+</testcase>
+<testcase name="transactions: search and filters on a virtualised feed" classname="app.spec.ts" time="1.303">
+</testcase>
+<testcase name="split: add an expense and still settle to zero" classname="app.spec.ts" time="0.828">
+</testcase>
+<testcase name="convert: exact result, spread and offline fixture" classname="app.spec.ts" time="0.912">
+</testcase>
+<testcase name="categoriser: typo-tolerant rules beat the naive keyword baseline" classname="app.spec.ts" time="0.612">
+</testcase>
+</testsuite>
+</testsuites>

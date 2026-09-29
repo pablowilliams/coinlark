@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "name": "Detector benchmark guard",
+  "description": "After editing the categoriser or recurring detector, re-run the held-out benchmarks and flag any regression.",
+  "version": "1",
+  "when": { "type": "fileEdited", "patterns": ["src/lib/categorise/**/*.ts", "src/lib/recurring/**/*.ts"] },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A detector changed. Run `npm run bench -- categorise` and `npm run bench -- recurring`, then compare test-set accuracy, precision and recall with `git show HEAD:reports/results.json`. Tune only on the dev seeds; if a test-set number drops, explain why before continuing."
+  }
+}

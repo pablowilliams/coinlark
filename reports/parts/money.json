@@ -1,0 +1,53 @@
+{
+  "seed": 20260929,
+  "split": {
+    "cases": 1000000,
+    "engineMismatches": 0,
+    "engineUnitsLost": 0,
+    "floatMismatches": 571547,
+    "floatUnitsLost": 767538,
+    "floatMaxLostInOneSplit": 3,
+    "ms": 4097
+  },
+  "conversion": {
+    "cases": 1000000,
+    "engineMismatches": 0,
+    "floatMismatchesVsHalfEven": 346,
+    "floatMismatchesVsHalfUp": 183,
+    "floatMaxErrorUnits": 1,
+    "ms": 3679
+  },
+  "roundTrip": {
+    "cases": 1000000,
+    "engineSignedErrorSum": -120,
+    "engineMaxAbsError": 2,
+    "floatSignedErrorSum": 162,
+    "floatMaxAbsError": 2,
+    "engineMeanSignedError": -0.00012,
+    "floatMeanSignedError": 0.000162,
+    "ms": 3243
+  },
+  "ledger": {
+    "postings": 1000000,
+    "engineDriftUnits": 0,
+    "floatDriftUnits": 0,
+    "floatRawError": 6.761401891708374e-7,
+    "floatDisplayMismatches": 0,
+    "ms": 302
+  },
+  "currencies": [
+    "GBP",
+    "EUR",
+    "USD",
+    "CHF",
+    "JPY",
+    "KWD"
+  ],
+  "rates": {
+    "date": "2026-09-28",
+    "source": "ECB reference rates via Frankfurter (fixture)",
+    "synthetic": [
+      "KWD"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "name": "Accessibility gate on UI change",
+  "description": "When a page, component or the stylesheet changes, run the axe e2e suite.",
+  "version": "1",
+  "when": { "type": "fileEdited", "patterns": ["src/pages/**/*.tsx", "src/components/**/*.tsx", "src/styles.css"] },
+  "then": { "type": "askAgent", "prompt": "Run `npx playwright test e2e/a11y.spec.ts`. Any axe violation is a blocker: fix it rather than disabling the rule." }
+}

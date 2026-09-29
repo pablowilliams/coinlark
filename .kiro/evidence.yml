@@ -1,0 +1,126 @@
+# Evidence map: every spec requirement → the tests that verify it → the number it produced.
+# `npm run evidence` (scripts/evidence.ts) runs the tests and benchmarks, fills each `{path|format}` from
+# reports/results.json, and writes reports/evidence.json and docs/EVIDENCE.md.
+# Formats: int, pct (1 dp), pct0, pct2, f1, f2, f3, f5, ms, kb, raw. A missing path fails the item.
+
+items:
+  - id: ME-1
+    spec: money-engine
+    requirement: '3.1–3.3 Allocation never loses a minor unit'
+    tested: '1,000,000 seeded random splits (2–7 parts, equal or weighted 1–10) across GBP, EUR, USD, CHF, JPY and KWD, checking that the parts add back to the total'
+    context: 'Integer minor units + largest-remainder allocation vs splitting major-unit floats and rounding each share'
+    metric: 'Minor units lost over 1M splits'
+    value: '{money.split.engineUnitsLost|int} units lost ({money.split.engineMismatches|int} bad splits)'
+    baseline: 'floats: {money.split.floatUnitsLost|int} units lost in {money.split.floatMismatches|int} of {money.split.cases|int} splits'
+    tests: ['src/lib/money/money.test.ts']
+    libraries: [TypeScript bigint, fast-check, Vitest]
+
+  - id: ME-2
+    spec: money-engine
+    requirement: "2.1–2.3 Exact FX conversion with banker's rounding"
+    tested: '1,000,000 seeded conversions between the six currencies at ECB fixture rates, compared with an independent exact BigInt reference'
+    context: 'Engine (rational rates, half-even) vs Math.round(amount × rate) on floats; float errors counted against both half-even and its own half-up policy'
+    metric: 'Conversions differing from the exact result'
+    value: '{money.conversion.engineMismatches|int} of {money.conversion.cases|int}'
+    baseline: 'floats: {money.conversion.floatMismatchesVsHalfUp|int} wrong even by their own half-up rule ({money.conversion.floatMismatchesVsHalfEven|int} vs half-even)'
+    tests: ['src/lib/money/fx.test.ts']
+    libraries: [TypeScript bigint, fast-check]
+
+  - id: ME-3
+    spec: money-engine
+    requirement: '4.2 Round trips and running balances (reported even where floats tie)'
+    tested: '1,000,000 A→B→A round trips at mid rate, and a 1,000,000-posting running balance'
+    context: "Both methods must round to the intermediate currency's minor unit, so round trips lose up to a couple of units either way"
+    metric: 'Round-trip max error · ledger drift'
+    value: 'engine max {money.roundTrip.engineMaxAbsError|int} units (mean signed {money.roundTrip.engineMeanSignedError|f5}) · ledger drift {money.ledger.engineDriftUnits|int}'
+    baseline: 'floats max {money.roundTrip.floatMaxAbsError|int} units (mean signed {money.roundTrip.floatMeanSignedError|f5}) · ledger drift {money.ledger.floatDriftUnits|int} after rounding (no measurable advantage here)'
+    tests: ['src/lib/money/money.test.ts', 'src/lib/money/fx.test.ts']
+    libraries: [TypeScript bigint]
+
+  - id: TI-1
+    spec: transaction-intelligence
+    requirement: '1.1–1.5 Virtualised 100k-row feed'
+    tested: 'Loaded the seeded 100,000-row feed in the production build and measured DOM size, render time and search latency; the same list without virtualisation was measured at 1k, 10k and 100k'
+    context: 'Headless Chromium 1440×900, no throttling, median of 3 cold loads; filter latency = input event → result painted, 20 samples'
+    metric: 'DOM nodes · render · filter latency at 100k'
+    value: '{feed.headline.virtual100k.domNodes|int} DOM nodes · {feed.headline.virtual100k.renderMs|ms} render · {feed.headline.virtual100k.filterMedianMs|ms} median filter'
+    baseline: 'non-virtualised at 10k: {feed.headline.baseline10k.domNodes|int} nodes · {feed.headline.baseline10k.renderMs|ms} · {feed.headline.baseline10k.filterMedianMs|ms}; at 100k: {feed.headline.baseline100k.renderMs|ms} render, {feed.headline.baseline100k.filterMedianMs|ms} filter'
+    tests: ['src/lib/feed/filter.test.ts', 'src/test/pages.test.tsx', 'e2e/app.spec.ts']
+    libraries: [React 18, Playwright, Performance API]
+
+  - id: TI-2
+    spec: transaction-intelligence
+    requirement: '2.1–2.4 Merchant categorisation on a held-out set'
+    tested: '10,000 held-out messy descriptors (35% typos, 30% truncated, processor prefixes, store numbers, cities); 20% are unseen independent businesses'
+    context: 'Rules and thresholds tuned on a separate dev seed; knowledge base of {categorise.test.knowledgeBaseEntries|int} names and aliases'
+    metric: 'Category accuracy (test seed)'
+    value: '{categorise.test.accuracy|pct} (known {categorise.test.knownAccuracy|pct}, unseen {categorise.test.unseenAccuracy|pct})'
+    baseline: 'naive keywords: {categorise.test.naiveAccuracy|pct} (known {categorise.test.naiveKnownAccuracy|pct}, unseen {categorise.test.naiveUnseenAccuracy|pct}); {categorise.test.errorReduction|pct0} fewer errors'
+    tests: ['src/lib/categorise/categorise.test.ts']
+    libraries: [TypeScript, Jaro–Winkler (hand-written), Vitest]
+
+  - id: TI-3
+    spec: transaction-intelligence
+    requirement: '3.1–3.5 Recurring-payment detection'
+    tested: '300 held-out synthetic users × 24 months ({recurring.test.transactions|int} transactions) with {recurring.test.truthSeries|int} planted weekly/monthly/yearly series incl. price rises, failed collections and cancellations'
+    context: 'Distractors: fixed-price coffees several times a week, weekly grocery shops, random Amazon orders; tuned on seeds 1000–1099, reported on 50000–50299'
+    metric: 'Precision · recall · next-due within ±3 days'
+    value: 'P {recurring.test.detector.precision|pct} · R {recurring.test.detector.recall|pct} · next due {recurring.test.nextDueWithin3Days.rate|pct}'
+    baseline: 'same-amount ≥3×: P {recurring.test.baseline.precision|pct} · R {recurring.test.baseline.recall|pct} ({recurring.test.baseline.fp|int} false positives vs {recurring.test.detector.fp|int})'
+    tests: ['src/lib/recurring/recurring.test.ts']
+    libraries: [TypeScript]
+
+  - id: SU-1
+    spec: settle-up
+    requirement: '1.2, 2.1–2.2, 4.1 Minimum transfers that always balance'
+    tested: '1,000 seeded groups of 3–12 people with 4–30 expenses each (arbitrary amounts, 20% weighted splits)'
+    context: 'Exact subset DP vs greedy vs everyone paying each payer back; every plan applied back to the balances'
+    metric: 'Transfers needed (mean per group)'
+    value: '{settle.random.meanTransfers.optimal|f2} per group ({settle.random.reductionVsPairwise|pct0} fewer); {settle.random.groupsBalancedToZero|int}/{settle.random.groups|int} groups settle to exactly 0'
+    baseline: 'pairwise: {settle.random.meanTransfers.pairwise|f2}; greedy: {settle.random.meanTransfers.greedy|f2} (exact beat greedy in {settle.random.optimalBeatsGreedyInGroups|int} groups; {settle.roundBills.optimalBeatsGreedyInGroups|int} with whole €10 bills)'
+    tests: ['src/lib/settle/settle.test.ts', 'src/test/pages.test.tsx', 'e2e/app.spec.ts']
+    libraries: [TypeScript, fast-check]
+
+  - id: IX-1
+    spec: insights-experience
+    requirement: '3.1 Zero axe violations on every page'
+    tested: 'axe-core on 6 pages × light/dark × desktop/mobile'
+    context: 'Tags wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa, best-practice'
+    metric: 'axe violations'
+    value: '{a11y.violations|int} violations in {a11y.scans|int} scans'
+    baseline: '{a11y.passedRuleChecks|int} rule checks passed'
+    tests: ['e2e/a11y.spec.ts']
+    libraries: [axe-core, Playwright]
+
+  - id: IX-2
+    spec: insights-experience
+    requirement: '1.1–1.4, 2.1–2.3, 3.2–3.4 Dashboard, localisation, keyboard, responsive'
+    tested: 'Every page on desktop 1440×900 and mobile 375×812: console errors, horizontal overflow, NaN/undefined text, locale switching, keyboard flow'
+    context: 'Production build in Chromium'
+    metric: 'Browser checks'
+    value: '{tests.e2e.passed|int} passed, {tests.e2e.failed|int} failed ({tests.e2e.skipped|int} desktop-only check skipped on mobile)'
+    baseline: '0 console errors, 0 px horizontal overflow at 375 px'
+    tests: ['e2e/app.spec.ts', 'src/lib/i18n/i18n.test.ts', 'src/lib/insights/insights.test.ts']
+    libraries: [Playwright, Intl API, React Testing Library]
+
+  - id: IX-3
+    spec: insights-experience
+    requirement: '4.1–4.2 Bundle budget and lab web vitals'
+    tested: 'Gzipped the production build; measured 5 cold loads of the overview page'
+    context: 'Budget: main ≤ {bundle.budget.mainGzipKb|int} KB gzip, initial ≤ {bundle.budget.initialGzipKb|int} KB; lab metrics, no throttling'
+    metric: 'Main chunk · LCP · CLS'
+    value: '{bundle.mainGzipKb|kb} main ({bundle.initialGzipKb|kb} initial) · LCP {vitals.overview.lcpMs|ms} · CLS {vitals.overview.cls|f3}'
+    baseline: 'within budget: {bundle.withinBudget}'
+    tests: []
+    libraries: [Vite, zlib, Playwright]
+
+  - id: ENG-1
+    spec: all
+    requirement: 'Definition of done: tests and coverage gate'
+    tested: 'Vitest unit, property and component tests with the coverage gate on src/lib'
+    context: 'tsc strict + ESLint clean in CI'
+    metric: 'Coverage (lines, src/lib)'
+    value: '{tests.coverage.lines|f1}% lines · {tests.coverage.branches|f1}% branches'
+    baseline: '{tests.unit.passed|int}/{tests.unit.total|int} tests passing'
+    tests: ['src/']
+    libraries: [Vitest, '@vitest/coverage-v8', React Testing Library, fast-check]

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="142" failures="0" errors="0" time="7.762819125">
+    <testsuite name="src/lib/categorise/categorise.test.ts" timestamp="2026-09-29T13:37:32.532Z" hostname="MacBook-Air-von-Pablo.local" tests="20" failures="0" errors="0" skipped="0" time="1.197376083">
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt; SQ *PRET A MANGER 0342 LONDON GB → pret a manger" time="0.005360875">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt; AMZN Mktp UK*2K4L91 → amzn mktp" time="0.000459792">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt; PAYPAL *NETFLIX.COM → netflix" time="0.000163667">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt; Sainsbury&apos;s S/mkt 0221 → sainsburys s mkt" time="0.000149">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt; BOOKING.COM LONDON NL → booking" time="0.000199666">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt; Café Nero MILANO IT → cafe nero" time="0.000423208">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt; H&amp;M 0412 → h m" time="0.00020075">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt; SP SPOTIFY P1B2C3 → spotify" time="0.000137542">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt;     → " time="0.000216667">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="normalise &gt; keeps a location word when it is the whole name" time="0.000188042">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="jaroWinkler &gt; scores identical, disjoint and typo strings" time="0.000839583">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="jaroWinkler &gt; is symmetric and bounded (property)" time="0.03002975">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="rules &gt; matches whole tokens, then tolerates typos in long keywords" time="0.006865834">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="Categoriser &gt; recognises known merchants through processor noise" time="0.000798458">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="Categoriser &gt; survives typos and truncation with fuzzy matching" time="0.005059042">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="Categoriser &gt; falls back to keyword rules for unseen businesses and to general otherwise" time="0.004644416">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="Categoriser &gt; caches by raw string and gives a stable merchant key" time="0.000307916">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="Categoriser &gt; beats the naive keyword baseline on a held-out noisy set" time="1.1347295">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="Categoriser &gt; naive baseline uses word boundaries" time="0.00043775">
+        </testcase>
+        <testcase classname="src/lib/categorise/categorise.test.ts" name="noise generator &gt; is deterministic and changes strings" time="0.001282875">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/lib/data/data.test.ts" timestamp="2026-09-29T13:37:32.537Z" hostname="MacBook-Air-von-Pablo.local" tests="6" failures="0" errors="0" skipped="0" time="0.251364125">
+        <testcase classname="src/lib/data/data.test.ts" name="rng &gt; is deterministic and in range" time="0.009544083">
+        </testcase>
+        <testcase classname="src/lib/data/data.test.ts" name="dates (UTC) &gt; does calendar maths without time-zone drift" time="0.001665958">
+        </testcase>
+        <testcase classname="src/lib/data/data.test.ts" name="generators &gt; generates a deterministic history with ground truth" time="0.104164083">
+        </testcase>
+        <testcase classname="src/lib/data/data.test.ts" name="generators &gt; generates a large feed quickly and categorises it" time="0.127647375">
+        </testcase>
+        <testcase classname="src/lib/data/data.test.ts" name="generators &gt; labelled sets contain known and unseen merchants" time="0.003540709">
+        </testcase>
+        <testcase classname="src/lib/data/data.test.ts" name="generators &gt; helpers" time="0.000991375">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/lib/feed/filter.test.ts" timestamp="2026-09-29T13:37:32.538Z" hostname="MacBook-Air-von-Pablo.local" tests="4" failures="0" errors="0" skipped="0" time="0.039746917">
+        <testcase classname="src/lib/feed/filter.test.ts" name="feed filter &gt; returns everything with the empty filter" time="0.009875375">
+        </testcase>
+        <testcase classname="src/lib/feed/filter.test.ts" name="feed filter &gt; filters by search terms (AND, case-insensitive)" time="0.00913075">
+        </testcase>
+        <testcase classname="src/lib/feed/filter.test.ts" name="feed filter &gt; filters by category, account and direction, keeping feed order" time="0.017292834">
+        </testcase>
+        <testcase classname="src/lib/feed/filter.test.ts" name="feed filter &gt; computes the visible window with overscan" time="0.000561583">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/lib/i18n/i18n.test.ts" timestamp="2026-09-29T13:37:32.539Z" hostname="MacBook-Air-von-Pablo.local" tests="12" failures="0" errors="0" skipped="0" time="0.091543875">
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="currency formatting per locale &gt; en-GB" time="0.044804875">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="currency formatting per locale &gt; it-IT" time="0.001684791">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="currency formatting per locale &gt; es-ES" time="0.000394834">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="currency formatting per locale &gt; de-DE" time="0.000462458">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="currency formatting per locale &gt; uses the currency exponent (JPY 0, KWD 3) and exact decimals" time="0.001529584">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="currency formatting per locale &gt; formats dates, months, numbers and percentages" time="0.015750042">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="currency formatting per locale &gt; parses localised input" time="0.002094958">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="message catalogues &gt; en-GB has every key with the same placeholders" time="0.007559625">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="message catalogues &gt; it-IT has every key with the same placeholders" time="0.003803875">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="message catalogues &gt; es-ES has every key with the same placeholders" time="0.002773667">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="message catalogues &gt; de-DE has every key with the same placeholders" time="0.003910875">
+        </testcase>
+        <testcase classname="src/lib/i18n/i18n.test.ts" name="message catalogues &gt; fills placeholders and leaves unknown ones visible" time="0.000845875">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/lib/insights/insights.test.ts" timestamp="2026-09-29T13:37:32.544Z" hostname="MacBook-Air-von-Pablo.local" tests="5" failures="0" errors="0" skipped="0" time="0.125481833">
+        <testcase classname="src/lib/insights/insights.test.ts" name="insights &gt; spends by month and category, excluding transfers and converting currencies" time="0.008682">
+        </testcase>
+        <testcase classname="src/lib/insights/insights.test.ts" name="insights &gt; computes KPIs for the last complete month vs the one before" time="0.00328925">
+        </testcase>
+        <testcase classname="src/lib/insights/insights.test.ts" name="insights &gt; tracks budget progress with warning and over states" time="0.000566167">
+        </testcase>
+        <testcase classname="src/lib/insights/insights.test.ts" name="insights &gt; totals multi-currency balances in any base" time="0.008083625">
+        </testcase>
+        <testcase classname="src/lib/insights/insights.test.ts" name="insights &gt; runs on the seeded history end to end" time="0.102242833">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/lib/money/fx.test.ts" timestamp="2026-09-29T13:37:32.545Z" hostname="MacBook-Air-von-Pablo.local" tests="13" failures="0" errors="0" skipped="0" time="0.057555625">
+        <testcase classname="src/lib/money/fx.test.ts" name="decimal &gt; parses and reduces exactly" time="0.005395209">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="decimal &gt; prints fixed decimals with half-even rounding" time="0.006365208">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="FX conversion &gt; computes cross rates through the base" time="0.000359875">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="FX conversion &gt; respects exponents: GBP → JPY → KWD" time="0.000985583">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="FX conversion &gt; applies the spread and reports the fee" time="0.000787167">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="FX conversion &gt; uses banker’s rounding on exact ties by default" time="0.000344083">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="FX conversion &gt; is monotonic in the amount (property)" time="0.0287425">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="FX conversion &gt; never gives more with a spread than at mid (property)" time="0.0065035">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="FX conversion &gt; totals mixed currencies in a base currency" time="0.000650958">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="rate tables &gt; loads the offline ECB fixture and flags KWD as synthetic" time="0.000328833">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="rate tables &gt; rejects unsupported bases and missing rates" time="0.001810167">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="rate tables &gt; falls back to the fixture when the live service fails" time="0.002109416">
+        </testcase>
+        <testcase classname="src/lib/money/fx.test.ts" name="rate tables &gt; uses live rates when available" time="0.000349083">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/lib/money/money.test.ts" timestamp="2026-09-29T13:37:32.547Z" hostname="MacBook-Air-von-Pablo.local" tests="53" failures="0" errors="0" skipped="0" time="0.151725417">
+        <testcase classname="src/lib/money/money.test.ts" name="currency table &gt; uses ISO 4217 exponents" time="0.00517075">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; 5n / 2n (half-even) = 2n" time="0.00060125">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; 7n / 2n (half-even) = 4n" time="0.000150333">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; -5n / 2n (half-even) = -2n" time="0.000115">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; -7n / 2n (half-even) = -4n" time="0.000104958">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; 5n / 2n (half-up) = 3n" time="0.000095">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; -5n / 2n (half-up) = -3n" time="0.000090375">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; 7n / 3n (half-even) = 2n" time="0.000091084">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; 8n / 3n (half-even) = 3n" time="0.000117375">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; 7n / 3n (floor) = 2n" time="0.000188291">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; -7n / 3n (floor) = -3n" time="0.00014">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; 7n / 3n (ceil) = 3n" time="0.000381583">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; -7n / 3n (ceil) = -2n" time="0.000191333">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; -7n / 3n (trunc) = -2n" time="0.000114958">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; 6n / 3n (half-even) = 2n" time="0.000504583">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; 5n / -2n (half-even) = -2n" time="0.0001115">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; rejects division by zero" time="0.000497834">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; is symmetric under negation (property)" time="0.01291825">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="divRound &gt; is always within half a unit of the exact quotient (property)" time="0.004032042">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="Money basics &gt; stores integer minor units and rejects floats or unsafe values" time="0.005492916">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="Money basics &gt; adds, subtracts, negates, compares" time="0.000769666">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="Money basics &gt; never mixes currencies" time="0.000284292">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="Money basics &gt; addition is associative and commutative (property)" time="0.018544208">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(12.34, GBP) = 1234" time="0.001160875">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(12.3, GBP) = 1230" time="0.000299083">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(12, GBP) = 1200" time="0.000219375">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(-0.05, EUR) = -5" time="0.000104584">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(1200, JPY) = 1200" time="0.000117">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(1200.5, JPY) = 1200" time="0.000085958">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(1201.5, JPY) = 1202" time="0.000304875">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(0.005, KWD) = 5" time="0.000130625">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(1 234.56, EUR) = 123456" time="0.00009375">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(0.125, GBP) = 12" time="0.000088791">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(0.135, GBP) = 14" time="0.00006775">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; fromMajor(.5, GBP) = 50" time="0.000467291">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; supports other rounding modes when parsing" time="0.000330666">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; rejects garbage" time="0.000401042">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; toDecimalString(1234 GBP) = 12.34" time="0.000281542">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; toDecimalString(-5 GBP) = -0.05" time="0.000096208">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; toDecimalString(1200 JPY) = 1200" time="0.000070167">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; toDecimalString(-7 JPY) = -7" time="0.000127625">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; toDecimalString(5 KWD) = 0.005" time="0.000089459">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; toDecimalString(37125 KWD) = 37.125" time="0.000170583">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; round-trips through the decimal string exactly (property)" time="0.008123167">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="parsing and printing &gt; gives an approximate number for charts only" time="0.000509542">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="allocate &gt; splits £100 three ways with no lost penny" time="0.001109166">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="allocate &gt; respects weights and gives leftovers to the largest remainders" time="0.000752625">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="allocate &gt; validates weights" time="0.000528042">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="allocate &gt; always sums to the original amount (property)" time="0.06657825">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="allocate &gt; equal splits differ by at most one minor unit (property)" time="0.012769709">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="multiplyBy &gt; applies decimal factors with banker’s rounding" time="0.000685209">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="naive float baseline (what the engine replaces) &gt; loses a penny on a three-way split of £100" time="0.000265334">
+        </testcase>
+        <testcase classname="src/lib/money/money.test.ts" name="naive float baseline (what the engine replaces) &gt; mis-rounds 1.005 because 1.005 is not representable" time="0.000194125">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/lib/recurring/recurring.test.ts" timestamp="2026-09-29T13:37:32.555Z" hostname="MacBook-Air-von-Pablo.local" tests="10" failures="0" errors="0" skipped="0" time="0.642786167">
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="detectRecurring &gt; finds a monthly subscription and predicts the next charge" time="0.00677075">
+        </testcase>
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="detectRecurring &gt; follows a price rise within tolerance and flags it" time="0.000875083">
+        </testcase>
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="detectRecurring &gt; bridges a failed collection" time="0.00057675">
+        </testcase>
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="detectRecurring &gt; detects weekly and yearly cadences" time="0.001016709">
+        </testcase>
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="detectRecurring &gt; ignores irregular purchases, income and transfers" time="0.005531334">
+        </testcase>
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="detectRecurring &gt; marks stopped subscriptions inactive" time="0.000632791">
+        </testcase>
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="detectRecurring &gt; helpers behave" time="0.00202475">
+        </testcase>
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="naive baseline and scoring &gt; flags any repeated identical amount (false positive on coffee)" time="0.000815333">
+        </testcase>
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="naive baseline and scoring &gt; scores precision/recall and next-due accuracy" time="0.002285666">
+        </testcase>
+        <testcase classname="src/lib/recurring/recurring.test.ts" name="naive baseline and scoring &gt; beats the baseline on seeded synthetic users" time="0.6193985">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/lib/settle/settle.test.ts" timestamp="2026-09-29T13:37:32.559Z" hostname="MacBook-Air-von-Pablo.local" tests="7" failures="0" errors="0" skipped="0" time="0.196700083">
+        <testcase classname="src/lib/settle/settle.test.ts" name="balances &gt; nets what each person paid against their share, summing to zero" time="0.005970666">
+        </testcase>
+        <testcase classname="src/lib/settle/settle.test.ts" name="balances &gt; keeps every cent when a bill does not divide evenly" time="0.000332375">
+        </testcase>
+        <testcase classname="src/lib/settle/settle.test.ts" name="balances &gt; validates currency and participants" time="0.001998">
+        </testcase>
+        <testcase classname="src/lib/settle/settle.test.ts" name="settle-up plans &gt; pairwise pays each payer back, netted per pair" time="0.001916666">
+        </testcase>
+        <testcase classname="src/lib/settle/settle.test.ts" name="settle-up plans &gt; finds the zero-sum subgroups that greedy misses" time="0.001263125">
+        </testcase>
+        <testcase classname="src/lib/settle/settle.test.ts" name="settle-up plans &gt; falls back to greedy above the exact limit" time="0.000468209">
+        </testcase>
+        <testcase classname="src/lib/settle/settle.test.ts" name="settle-up plans &gt; every plan settles every balance to exactly zero, with optimal ≤ greedy ≤ n−1 (property)" time="0.180453875">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/pages.test.tsx" timestamp="2026-09-29T13:37:32.561Z" hostname="MacBook-Air-von-Pablo.local" tests="12" failures="0" errors="0" skipped="0" time="5.008539">
+        <testcase classname="src/test/pages.test.tsx" name="Overview &gt; shows KPI tiles, balances and budgets without NaN" time="0.613885833">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Overview &gt; re-renders in another language and base currency" time="0.396208">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Overview &gt; switches theme" time="0.17087725">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Split &gt; settles the example trip with fewer transfers than pairwise and balances to zero" time="0.051414958">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Split &gt; validates and adds an expense and a person" time="0.969924334">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Convert &gt; converts with a spread and shows the lost penny for floats" time="0.198918">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Convert &gt; falls back to the fixture when live rates are unreachable" time="0.065642875">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Categorise &gt; shows the pipeline for an example and the naive answer" time="0.050984791">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Subscriptions &gt; lists detected recurring payments with a monthly total" time="0.018083792">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Transactions &gt; loads a feed, renders only a window of rows and filters" time="0.434780125">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="Transactions &gt; renders every row in the non-virtualised baseline mode" time="1.924934583">
+        </testcase>
+        <testcase classname="src/test/pages.test.tsx" name="App routing &gt; routes by hash and marks the current nav item" time="0.104914417">
+        </testcase>
+    </testsuite>
+</testsuites>

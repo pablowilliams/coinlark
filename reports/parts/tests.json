@@ -1,0 +1,25 @@
+{
+  "unit": {
+    "total": 142,
+    "passed": 142,
+    "failed": 0,
+    "skipped": 0
+  },
+  "coverage": {
+    "scope": "src/lib/**",
+    "lines": 99.87,
+    "statements": 99.5,
+    "branches": 96.32,
+    "functions": 100
+  },
+  "e2e": {
+    "total": 52,
+    "passed": 51,
+    "failed": 0,
+    "skipped": 1,
+    "projects": [
+      "desktop 1440×900",
+      "mobile 375×812"
+    ]
+  }
+}

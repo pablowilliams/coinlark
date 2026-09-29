@@ -1,0 +1,8 @@
+{
+  "tool": "axe-core via @axe-core/playwright; tags wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa, best-practice",
+  "scans": 24,
+  "pages": 6,
+  "violations": 0,
+  "scansWithViolations": 0,
+  "passedRuleChecks": 994
+}

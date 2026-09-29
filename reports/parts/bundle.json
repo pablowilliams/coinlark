@@ -1,0 +1,59 @@
+{
+  "main": "index-BwmV47xn.js",
+  "mainGzipKb": 54,
+  "mainRawKb": 164.5,
+  "initialGzipKb": 73.1,
+  "initialFiles": [
+    "Layout-D-s9lXpn.js",
+    "index-BwmV47xn.js",
+    "index-DwjkjLmk.css"
+  ],
+  "totalGzipKb": 82.5,
+  "budget": {
+    "mainGzipKb": 80,
+    "initialGzipKb": 110
+  },
+  "withinBudget": true,
+  "assets": [
+    {
+      "file": "Categorise-BiyPYgDD.js",
+      "rawKb": 2.5,
+      "gzipKb": 1
+    },
+    {
+      "file": "Convert-BxjauIaD.js",
+      "rawKb": 5.9,
+      "gzipKb": 1.9
+    },
+    {
+      "file": "Layout-D-s9lXpn.js",
+      "rawKb": 43.3,
+      "gzipKb": 15.4
+    },
+    {
+      "file": "Split-BB6WBc-Z.js",
+      "rawKb": 9.5,
+      "gzipKb": 3
+    },
+    {
+      "file": "Subscriptions-D6NnYvkK.js",
+      "rawKb": 2.7,
+      "gzipKb": 0.9
+    },
+    {
+      "file": "Transactions-Lj79FKYa.js",
+      "rawKb": 7.5,
+      "gzipKb": 2.6
+    },
+    {
+      "file": "index-BwmV47xn.js",
+      "rawKb": 164.5,
+      "gzipKb": 54
+    },
+    {
+      "file": "index-DwjkjLmk.css",
+      "rawKb": 14,
+      "gzipKb": 3.7
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "name": "Money engine guard",
+  "description": "When money code changes, re-run the property tests and the 1M-case drift benchmark and compare with the committed results.",
+  "version": "1",
+  "when": { "type": "fileEdited", "patterns": ["src/lib/money/**/*.ts"] },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Money engine code changed. Run `npx vitest run src/lib/money` and `npm run bench -- money`. If engineMismatches or engineUnitsLost in reports/results.json is not 0, stop and explain before continuing."
+  }
+}

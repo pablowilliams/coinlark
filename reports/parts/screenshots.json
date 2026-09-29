@@ -1,0 +1,200 @@
+{
+  "count": 24,
+  "maxOverflowPx": 0,
+  "consoleErrors": 0,
+  "suspiciousText": 0,
+  "shots": [
+    {
+      "file": "overview-dark.jpg",
+      "view": "desktop",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "transactions-dark.jpg",
+      "view": "desktop",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "subscriptions-dark.jpg",
+      "view": "desktop",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "split-dark.jpg",
+      "view": "desktop",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "convert-dark.jpg",
+      "view": "desktop",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "categorise-dark.jpg",
+      "view": "desktop",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "overview-light.jpg",
+      "view": "desktop",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "transactions-light.jpg",
+      "view": "desktop",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "subscriptions-light.jpg",
+      "view": "desktop",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "split-light.jpg",
+      "view": "desktop",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "convert-light.jpg",
+      "view": "desktop",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "categorise-light.jpg",
+      "view": "desktop",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "overview-mobile-dark.jpg",
+      "view": "mobile",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "transactions-mobile-dark.jpg",
+      "view": "mobile",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "subscriptions-mobile-dark.jpg",
+      "view": "mobile",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "split-mobile-dark.jpg",
+      "view": "mobile",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "convert-mobile-dark.jpg",
+      "view": "mobile",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "categorise-mobile-dark.jpg",
+      "view": "mobile",
+      "theme": "dark",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "overview-mobile-light.jpg",
+      "view": "mobile",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "transactions-mobile-light.jpg",
+      "view": "mobile",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "subscriptions-mobile-light.jpg",
+      "view": "mobile",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "split-mobile-light.jpg",
+      "view": "mobile",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "convert-mobile-light.jpg",
+      "view": "mobile",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    },
+    {
+      "file": "categorise-mobile-light.jpg",
+      "view": "mobile",
+      "theme": "light",
+      "overflowPx": 0,
+      "suspiciousText": false,
+      "consoleErrors": []
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "note": "HARD noise: 35% typo, 30% truncation, processor prefixes, store numbers, locations. 20% of descriptors are unseen independent businesses.",
+  "dev": {
+    "seed": 1,
+    "n": 4000,
+    "known": 3214,
+    "unseen": 786,
+    "correct": 3916,
+    "knownCorrect": 3202,
+    "unseenCorrect": 714,
+    "naiveCorrect": 2896,
+    "naiveKnownCorrect": 2350,
+    "naiveUnseenCorrect": 546,
+    "accuracy": 0.979,
+    "knownAccuracy": 0.9962663347853142,
+    "unseenAccuracy": 0.9083969465648855,
+    "naiveAccuracy": 0.724,
+    "naiveKnownAccuracy": 0.731176104542626,
+    "naiveUnseenAccuracy": 0.6946564885496184,
+    "errorReduction": 0.9239130434782609,
+    "byMethod": {
+      "exact": {
+        "n": 2401,
+        "correct": 2401
+      },
+      "fuzzy": {
+        "n": 791,
+        "correct": 791
+      },
+      "rule": {
+        "n": 724,
+        "correct": 724
+      },
+      "none": {
+        "n": 84,
+        "correct": 0
+      }
+    },
+    "msPerDescriptor": 0.08418941649999988,
+    "knowledgeBaseEntries": 167
+  },
+  "test": {
+    "seed": 20260929,
+    "n": 10000,
+    "known": 8060,
+    "unseen": 1940,
+    "correct": 9790,
+    "knownCorrect": 8037,
+    "unseenCorrect": 1753,
+    "naiveCorrect": 7192,
+    "naiveKnownCorrect": 5862,
+    "naiveUnseenCorrect": 1330,
+    "accuracy": 0.979,
+    "knownAccuracy": 0.9971464019851116,
+    "unseenAccuracy": 0.9036082474226804,
+    "naiveAccuracy": 0.7192,
+    "naiveKnownAccuracy": 0.7272952853598015,
+    "naiveUnseenAccuracy": 0.6855670103092784,
+    "errorReduction": 0.9252136752136753,
+    "byMethod": {
+      "exact": {
+        "n": 6019,
+        "correct": 6019
+      },
+      "fuzzy": {
+        "n": 2006,
+        "correct": 2006
+      },
+      "rule": {
+        "n": 1766,
+        "correct": 1765
+      },
+      "none": {
+        "n": 209,
+        "correct": 0
+      }
+    },
+    "msPerDescriptor": 0.07096162920000006,
+    "knowledgeBaseEntries": 167
+  }
+}

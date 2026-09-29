@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "name": "Translation parity",
+  "description": "When the message catalogue changes, check all four locales still have the same keys and placeholders.",
+  "version": "1",
+  "when": { "type": "fileEdited", "patterns": ["src/lib/i18n/messages.ts"] },
+  "then": { "type": "askAgent", "prompt": "Run `npx vitest run src/lib/i18n`. If a key or placeholder is missing in it-IT, es-ES or de-DE, add a proper translation (not English) and re-run." }
+}

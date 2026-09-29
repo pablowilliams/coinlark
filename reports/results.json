@@ -1,0 +1,701 @@
+{
+  "note": "Every number in this file is produced by a script in this repo (see .kiro/evidence.yml). All data is synthetic and seeded.",
+  "generated_at": "2026-09-29T13:43:08.328Z",
+  "node": "v25.6.1",
+  "a11y": {
+    "tool": "axe-core via @axe-core/playwright; tags wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa, best-practice",
+    "scans": 24,
+    "pages": 6,
+    "violations": 0,
+    "scansWithViolations": 0,
+    "passedRuleChecks": 994
+  },
+  "bundle": {
+    "main": "index-BwmV47xn.js",
+    "mainGzipKb": 54,
+    "mainRawKb": 164.5,
+    "initialGzipKb": 73.1,
+    "initialFiles": [
+      "Layout-D-s9lXpn.js",
+      "index-BwmV47xn.js",
+      "index-DwjkjLmk.css"
+    ],
+    "totalGzipKb": 82.5,
+    "budget": {
+      "mainGzipKb": 80,
+      "initialGzipKb": 110
+    },
+    "withinBudget": true,
+    "assets": [
+      {
+        "file": "Categorise-BiyPYgDD.js",
+        "rawKb": 2.5,
+        "gzipKb": 1
+      },
+      {
+        "file": "Convert-BxjauIaD.js",
+        "rawKb": 5.9,
+        "gzipKb": 1.9
+      },
+      {
+        "file": "Layout-D-s9lXpn.js",
+        "rawKb": 43.3,
+        "gzipKb": 15.4
+      },
+      {
+        "file": "Split-BB6WBc-Z.js",
+        "rawKb": 9.5,
+        "gzipKb": 3
+      },
+      {
+        "file": "Subscriptions-D6NnYvkK.js",
+        "rawKb": 2.7,
+        "gzipKb": 0.9
+      },
+      {
+        "file": "Transactions-Lj79FKYa.js",
+        "rawKb": 7.5,
+        "gzipKb": 2.6
+      },
+      {
+        "file": "index-BwmV47xn.js",
+        "rawKb": 164.5,
+        "gzipKb": 54
+      },
+      {
+        "file": "index-DwjkjLmk.css",
+        "rawKb": 14,
+        "gzipKb": 3.7
+      }
+    ]
+  },
+  "categorise": {
+    "note": "HARD noise: 35% typo, 30% truncation, processor prefixes, store numbers, locations. 20% of descriptors are unseen independent businesses.",
+    "dev": {
+      "seed": 1,
+      "n": 4000,
+      "known": 3214,
+      "unseen": 786,
+      "correct": 3916,
+      "knownCorrect": 3202,
+      "unseenCorrect": 714,
+      "naiveCorrect": 2896,
+      "naiveKnownCorrect": 2350,
+      "naiveUnseenCorrect": 546,
+      "accuracy": 0.979,
+      "knownAccuracy": 0.9962663347853142,
+      "unseenAccuracy": 0.9083969465648855,
+      "naiveAccuracy": 0.724,
+      "naiveKnownAccuracy": 0.731176104542626,
+      "naiveUnseenAccuracy": 0.6946564885496184,
+      "errorReduction": 0.9239130434782609,
+      "byMethod": {
+        "exact": {
+          "n": 2401,
+          "correct": 2401
+        },
+        "fuzzy": {
+          "n": 791,
+          "correct": 791
+        },
+        "rule": {
+          "n": 724,
+          "correct": 724
+        },
+        "none": {
+          "n": 84,
+          "correct": 0
+        }
+      },
+      "msPerDescriptor": 0.08418941649999988,
+      "knowledgeBaseEntries": 167
+    },
+    "test": {
+      "seed": 20260929,
+      "n": 10000,
+      "known": 8060,
+      "unseen": 1940,
+      "correct": 9790,
+      "knownCorrect": 8037,
+      "unseenCorrect": 1753,
+      "naiveCorrect": 7192,
+      "naiveKnownCorrect": 5862,
+      "naiveUnseenCorrect": 1330,
+      "accuracy": 0.979,
+      "knownAccuracy": 0.9971464019851116,
+      "unseenAccuracy": 0.9036082474226804,
+      "naiveAccuracy": 0.7192,
+      "naiveKnownAccuracy": 0.7272952853598015,
+      "naiveUnseenAccuracy": 0.6855670103092784,
+      "errorReduction": 0.9252136752136753,
+      "byMethod": {
+        "exact": {
+          "n": 6019,
+          "correct": 6019
+        },
+        "fuzzy": {
+          "n": 2006,
+          "correct": 2006
+        },
+        "rule": {
+          "n": 1766,
+          "correct": 1765
+        },
+        "none": {
+          "n": 209,
+          "correct": 0
+        }
+      },
+      "msPerDescriptor": 0.07096162920000006,
+      "knowledgeBaseEntries": 167
+    }
+  },
+  "feed": {
+    "note": "Headless Chromium 1440×900, production build, no throttling, one machine. generateMs = seeded generation + categorisation (same for both modes); renderMs = data ready → first paint of rows; filter latency = input event → filtered result committed and painted.",
+    "runs": [
+      {
+        "n": 1000,
+        "virtual": true,
+        "completed": true,
+        "error": null,
+        "reps": 3,
+        "generateMs": 11.7,
+        "renderMs": 21.4,
+        "domNodes": 344,
+        "rowsInDom": 18,
+        "filterMedianMs": 31.2,
+        "filterP95Ms": 31.7,
+        "filterSamples": 20
+      },
+      {
+        "n": 10000,
+        "virtual": true,
+        "completed": true,
+        "error": null,
+        "reps": 3,
+        "generateMs": 93.6,
+        "renderMs": 18,
+        "domNodes": 344,
+        "rowsInDom": 18,
+        "filterMedianMs": 31.3,
+        "filterP95Ms": 32.1,
+        "filterSamples": 20
+      },
+      {
+        "n": 100000,
+        "virtual": true,
+        "completed": true,
+        "error": null,
+        "reps": 3,
+        "generateMs": 621.7,
+        "renderMs": 39.1,
+        "domNodes": 344,
+        "rowsInDom": 18,
+        "filterMedianMs": 31.9,
+        "filterP95Ms": 32.4,
+        "filterSamples": 20
+      },
+      {
+        "n": 1000,
+        "virtual": false,
+        "completed": true,
+        "error": null,
+        "reps": 3,
+        "generateMs": 10,
+        "renderMs": 98,
+        "domNodes": 11146,
+        "rowsInDom": 1000,
+        "filterMedianMs": 48.6,
+        "filterP95Ms": 82,
+        "filterSamples": 20
+      },
+      {
+        "n": 10000,
+        "virtual": false,
+        "completed": true,
+        "error": null,
+        "reps": 3,
+        "generateMs": 77.9,
+        "renderMs": 1065.5,
+        "domNodes": 110146,
+        "rowsInDom": 10000,
+        "filterMedianMs": 283.7,
+        "filterP95Ms": 1191.4,
+        "filterSamples": 20
+      },
+      {
+        "n": 100000,
+        "virtual": false,
+        "completed": true,
+        "error": null,
+        "reps": 1,
+        "generateMs": 565.5,
+        "renderMs": 12800.4,
+        "domNodes": 1100146,
+        "rowsInDom": 100000,
+        "filterMedianMs": 16348.7,
+        "filterP95Ms": 51682.7,
+        "filterSamples": 6
+      }
+    ],
+    "headline": {
+      "virtual100k": {
+        "n": 100000,
+        "virtual": true,
+        "completed": true,
+        "error": null,
+        "reps": 3,
+        "generateMs": 621.7,
+        "renderMs": 39.1,
+        "domNodes": 344,
+        "rowsInDom": 18,
+        "filterMedianMs": 31.9,
+        "filterP95Ms": 32.4,
+        "filterSamples": 20
+      },
+      "baseline10k": {
+        "n": 10000,
+        "virtual": false,
+        "completed": true,
+        "error": null,
+        "reps": 3,
+        "generateMs": 77.9,
+        "renderMs": 1065.5,
+        "domNodes": 110146,
+        "rowsInDom": 10000,
+        "filterMedianMs": 283.7,
+        "filterP95Ms": 1191.4,
+        "filterSamples": 20
+      },
+      "baseline100k": {
+        "n": 100000,
+        "virtual": false,
+        "completed": true,
+        "error": null,
+        "reps": 1,
+        "generateMs": 565.5,
+        "renderMs": 12800.4,
+        "domNodes": 1100146,
+        "rowsInDom": 100000,
+        "filterMedianMs": 16348.7,
+        "filterP95Ms": 51682.7,
+        "filterSamples": 6
+      },
+      "virtual10k": {
+        "n": 10000,
+        "virtual": true,
+        "completed": true,
+        "error": null,
+        "reps": 3,
+        "generateMs": 93.6,
+        "renderMs": 18,
+        "domNodes": 344,
+        "rowsInDom": 18,
+        "filterMedianMs": 31.3,
+        "filterP95Ms": 32.1,
+        "filterSamples": 20
+      }
+    }
+  },
+  "money": {
+    "seed": 20260929,
+    "split": {
+      "cases": 1000000,
+      "engineMismatches": 0,
+      "engineUnitsLost": 0,
+      "floatMismatches": 571547,
+      "floatUnitsLost": 767538,
+      "floatMaxLostInOneSplit": 3,
+      "ms": 4097
+    },
+    "conversion": {
+      "cases": 1000000,
+      "engineMismatches": 0,
+      "floatMismatchesVsHalfEven": 346,
+      "floatMismatchesVsHalfUp": 183,
+      "floatMaxErrorUnits": 1,
+      "ms": 3679
+    },
+    "roundTrip": {
+      "cases": 1000000,
+      "engineSignedErrorSum": -120,
+      "engineMaxAbsError": 2,
+      "floatSignedErrorSum": 162,
+      "floatMaxAbsError": 2,
+      "engineMeanSignedError": -0.00012,
+      "floatMeanSignedError": 0.000162,
+      "ms": 3243
+    },
+    "ledger": {
+      "postings": 1000000,
+      "engineDriftUnits": 0,
+      "floatDriftUnits": 0,
+      "floatRawError": 6.761401891708374e-7,
+      "floatDisplayMismatches": 0,
+      "ms": 302
+    },
+    "currencies": [
+      "GBP",
+      "EUR",
+      "USD",
+      "CHF",
+      "JPY",
+      "KWD"
+    ],
+    "rates": {
+      "date": "2026-09-28",
+      "source": "ECB reference rates via Frankfurter (fixture)",
+      "synthetic": [
+        "KWD"
+      ]
+    }
+  },
+  "recurring": {
+    "dev": {
+      "firstSeed": 1000,
+      "users": 100,
+      "transactions": 167855,
+      "truthSeries": 900,
+      "detector": {
+        "tp": 898,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.9977777777777778,
+        "recall": 0.9977777777777778,
+        "f1": 0.9977777777777778
+      },
+      "baseline": {
+        "tp": 808,
+        "fp": 229,
+        "fn": 92,
+        "precision": 0.7791706846673095,
+        "recall": 0.8977777777777778,
+        "f1": 0.8342798141455859
+      },
+      "nextDueWithin3Days": {
+        "hits": 727,
+        "total": 768,
+        "rate": 0.9466145833333334
+      },
+      "msPerUser": 6.100989539999955
+    },
+    "test": {
+      "firstSeed": 50000,
+      "users": 300,
+      "transactions": 503183,
+      "truthSeries": 2700,
+      "detector": {
+        "tp": 2685,
+        "fp": 18,
+        "fn": 15,
+        "precision": 0.9933407325194229,
+        "recall": 0.9944444444444445,
+        "f1": 0.9938922820655193
+      },
+      "baseline": {
+        "tp": 2420,
+        "fp": 675,
+        "fn": 280,
+        "precision": 0.7819063004846527,
+        "recall": 0.8962962962962963,
+        "f1": 0.8352027610008629
+      },
+      "nextDueWithin3Days": {
+        "hits": 2170,
+        "total": 2259,
+        "rate": 0.9606020362992475
+      },
+      "msPerUser": 7.0763108400000965
+    }
+  },
+  "screenshots": {
+    "count": 24,
+    "maxOverflowPx": 0,
+    "consoleErrors": 0,
+    "suspiciousText": 0,
+    "shots": [
+      {
+        "file": "overview-dark.jpg",
+        "view": "desktop",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "transactions-dark.jpg",
+        "view": "desktop",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "subscriptions-dark.jpg",
+        "view": "desktop",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "split-dark.jpg",
+        "view": "desktop",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "convert-dark.jpg",
+        "view": "desktop",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "categorise-dark.jpg",
+        "view": "desktop",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "overview-light.jpg",
+        "view": "desktop",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "transactions-light.jpg",
+        "view": "desktop",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "subscriptions-light.jpg",
+        "view": "desktop",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "split-light.jpg",
+        "view": "desktop",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "convert-light.jpg",
+        "view": "desktop",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "categorise-light.jpg",
+        "view": "desktop",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "overview-mobile-dark.jpg",
+        "view": "mobile",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "transactions-mobile-dark.jpg",
+        "view": "mobile",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "subscriptions-mobile-dark.jpg",
+        "view": "mobile",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "split-mobile-dark.jpg",
+        "view": "mobile",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "convert-mobile-dark.jpg",
+        "view": "mobile",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "categorise-mobile-dark.jpg",
+        "view": "mobile",
+        "theme": "dark",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "overview-mobile-light.jpg",
+        "view": "mobile",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "transactions-mobile-light.jpg",
+        "view": "mobile",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "subscriptions-mobile-light.jpg",
+        "view": "mobile",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "split-mobile-light.jpg",
+        "view": "mobile",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "convert-mobile-light.jpg",
+        "view": "mobile",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      },
+      {
+        "file": "categorise-mobile-light.jpg",
+        "view": "mobile",
+        "theme": "light",
+        "overflowPx": 0,
+        "suspiciousText": false,
+        "consoleErrors": []
+      }
+    ]
+  },
+  "settle": {
+    "random": {
+      "groups": 1000,
+      "firstSeed": 7000,
+      "amounts": "any amount €1–€400, 20% weighted splits",
+      "meanGroupSize": 7.55,
+      "meanExpenses": 17.034,
+      "transfers": {
+        "pairwise": 24002,
+        "greedy": 6542,
+        "optimal": 6540
+      },
+      "meanTransfers": {
+        "pairwise": 24.002,
+        "greedy": 6.542,
+        "optimal": 6.54
+      },
+      "reductionVsPairwise": 0.7275227064411299,
+      "optimalBeatsGreedyInGroups": 2,
+      "groupsBalancedToZero": 1000,
+      "groupsWhereSharesSumToTotal": 1000,
+      "msPerGroupOptimal": 0.05754909099996439
+    },
+    "roundBills": {
+      "groups": 1000,
+      "firstSeed": 9000,
+      "amounts": "whole €10 bills, equal splits",
+      "meanGroupSize": 7.425,
+      "meanExpenses": 17.01,
+      "transfers": {
+        "pairwise": 23355,
+        "greedy": 6407,
+        "optimal": 6389
+      },
+      "meanTransfers": {
+        "pairwise": 23.355,
+        "greedy": 6.407,
+        "optimal": 6.389
+      },
+      "reductionVsPairwise": 0.7264397345322201,
+      "optimalBeatsGreedyInGroups": 16,
+      "groupsBalancedToZero": 1000,
+      "groupsWhereSharesSumToTotal": 1000,
+      "msPerGroupOptimal": 0.03979392000007647
+    }
+  },
+  "tests": {
+    "unit": {
+      "total": 142,
+      "passed": 142,
+      "failed": 0,
+      "skipped": 0
+    },
+    "coverage": {
+      "scope": "src/lib/**",
+      "lines": 99.87,
+      "statements": 99.5,
+      "branches": 96.32,
+      "functions": 100
+    },
+    "e2e": {
+      "total": 52,
+      "passed": 51,
+      "failed": 0,
+      "skipped": 1,
+      "projects": [
+        "desktop 1440×900",
+        "mobile 375×812"
+      ]
+    }
+  },
+  "vitals": {
+    "note": "Lab metrics (not field data): headless Chromium, local preview server, no throttling, median of 5 cold loads. Thresholds for \"good\": LCP ≤ 2500 ms, CLS ≤ 0.1.",
+    "overview": {
+      "samples": 5,
+      "fcpMs": 44,
+      "lcpMs": 44,
+      "cls": 0,
+      "ttfbMs": 1.1,
+      "domContentLoadedMs": 7.8
+    },
+    "transactions-100k": {
+      "samples": 5,
+      "fcpMs": 44,
+      "lcpMs": 568,
+      "cls": 0.029,
+      "ttfbMs": 1.1,
+      "domContentLoadedMs": 6.8
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "random": {
+    "groups": 1000,
+    "firstSeed": 7000,
+    "amounts": "any amount €1–€400, 20% weighted splits",
+    "meanGroupSize": 7.55,
+    "meanExpenses": 17.034,
+    "transfers": {
+      "pairwise": 24002,
+      "greedy": 6542,
+      "optimal": 6540
+    },
+    "meanTransfers": {
+      "pairwise": 24.002,
+      "greedy": 6.542,
+      "optimal": 6.54
+    },
+    "reductionVsPairwise": 0.7275227064411299,
+    "optimalBeatsGreedyInGroups": 2,
+    "groupsBalancedToZero": 1000,
+    "groupsWhereSharesSumToTotal": 1000,
+    "msPerGroupOptimal": 0.05754909099996439
+  },
+  "roundBills": {
+    "groups": 1000,
+    "firstSeed": 9000,
+    "amounts": "whole €10 bills, equal splits",
+    "meanGroupSize": 7.425,
+    "meanExpenses": 17.01,
+    "transfers": {
+      "pairwise": 23355,
+      "greedy": 6407,
+      "optimal": 6389
+    },
+    "meanTransfers": {
+      "pairwise": 23.355,
+      "greedy": 6.407,
+      "optimal": 6.389
+    },
+    "reductionVsPairwise": 0.7264397345322201,
+    "optimalBeatsGreedyInGroups": 16,
+    "groupsBalancedToZero": 1000,
+    "groupsWhereSharesSumToTotal": 1000,
+    "msPerGroupOptimal": 0.03979392000007647
+  }
+}

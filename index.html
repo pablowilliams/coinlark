@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Coinlark: a multi-currency money app demo with exact integer money maths. Synthetic data only."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230b6b53'/%3E%3Cpath d='M8 19c4-1 7-4 9-9 1 4 0 8-3 11 3 0 6-1 9-4-1 5-6 8-11 8-2 0-3-1-4-2z' fill='%23fff'/%3E%3C/svg%3E"
+    />
+    <title>Coinlark</title>
+    <script>
+      // Apply the theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var q = new URLSearchParams(location.hash.split('?')[1] || '').get('theme');
+          var s = q || localStorage.getItem('coinlark.theme');
+          var dark =
+            s === 'dark' || ((!s || s === 'system') && matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

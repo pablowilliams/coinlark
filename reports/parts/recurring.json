@@ -1,0 +1,58 @@
+{
+  "dev": {
+    "firstSeed": 1000,
+    "users": 100,
+    "transactions": 167855,
+    "truthSeries": 900,
+    "detector": {
+      "tp": 898,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.9977777777777778,
+      "recall": 0.9977777777777778,
+      "f1": 0.9977777777777778
+    },
+    "baseline": {
+      "tp": 808,
+      "fp": 229,
+      "fn": 92,
+      "precision": 0.7791706846673095,
+      "recall": 0.8977777777777778,
+      "f1": 0.8342798141455859
+    },
+    "nextDueWithin3Days": {
+      "hits": 727,
+      "total": 768,
+      "rate": 0.9466145833333334
+    },
+    "msPerUser": 6.100989539999955
+  },
+  "test": {
+    "firstSeed": 50000,
+    "users": 300,
+    "transactions": 503183,
+    "truthSeries": 2700,
+    "detector": {
+      "tp": 2685,
+      "fp": 18,
+      "fn": 15,
+      "precision": 0.9933407325194229,
+      "recall": 0.9944444444444445,
+      "f1": 0.9938922820655193
+    },
+    "baseline": {
+      "tp": 2420,
+      "fp": 675,
+      "fn": 280,
+      "precision": 0.7819063004846527,
+      "recall": 0.8962962962962963,
+      "f1": 0.8352027610008629
+    },
+    "nextDueWithin3Days": {
+      "hits": 2170,
+      "total": 2259,
+      "rate": 0.9606020362992475
+    },
+    "msPerUser": 7.0763108400000965
+  }
+}
